@@ -1,0 +1,17 @@
+.wl-game {
+
+    .wl-no-padding {
+        padding: 0px !important;
+    }
+
+    .wl-hand {
+        padding: 2.5vh;
+        height: 20vh;
+        overflow-x: auto;
+        background: gray;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}

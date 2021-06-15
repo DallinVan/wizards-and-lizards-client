@@ -1,0 +1,25 @@
+<div class="wl-select-color-container container-fluid">
+    <ng-container *ngIf="gameStateService.gameState$ | async as game">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-12 col-sm-6 pt-4 pb-4" [formGroup]="selectColorFormGroup">
+
+                <div class="wl-font-header wl-font-md font-weight-bold mb-3 text-center">Select color</div>
+                <ng-container *ngFor="let color of colors; let i = index;">
+                    <input type="radio" name="color" formControlName="color" class="mb-3" [value]="color"/>
+                    <!-- <span class="wl-font-body wl-font-md ml-4">{{color}}</span> -->
+                    <div class="wl-marble" [ngStyle]="{'background': color, 'border': '8px solid ' + color + 'Accent'}">
+
+                    </div>
+                    <br><br>
+                </ng-container>
+
+                <hr class="mt-2">
+
+                <button class="wl-button mt-4" (click)="selectColor()">Continue</button>
+
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </ng-container>
+</div>

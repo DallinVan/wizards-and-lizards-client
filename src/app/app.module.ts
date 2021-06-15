@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 
 import {HttpClientModule} from '@angular/common/http';
+import { GetStartedModule } from './get-started/get-started.module';
+import { GameModule } from './game/game.module';
 
 const config: SocketIoConfig = { url: 'http://localhost:8080', options: {} };
 
@@ -15,9 +17,11 @@ const config: SocketIoConfig = { url: 'http://localhost:8080', options: {} };
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     SocketIoModule.forRoot(config),
-    HttpClientModule
+    HttpClientModule,
+    GetStartedModule,
+    GameModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

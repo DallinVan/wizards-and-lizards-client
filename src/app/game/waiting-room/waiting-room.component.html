@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="mt-4 wl-font-body wl-font-md">
+        {{message}}
+    </div>
+    <ng-container *ngIf="gameStateService.gameState$ | async as game">
+        <div class="row mt-4">
+            <div class="col-sm-1"></div>
+            <div class="col-12 col-sm-4 mb-4">
+                <div class="wl-card p-3 text-center">
+                    <div class="wl-font-header wl-font-md">{{game.teams[0]}}</div>
+                    <hr class="mb-2">
+                    <div *ngFor="let player of game.players">
+                        <div *ngIf="player.teamId === game.teams[0]" class="wl-font-body wl-font-sm">
+                            {{player.id}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-2 wl-font-header wl-font-sm text-center pb-3 mt-sm-5">
+                VS
+            </div>
+            <div class="col-12 col-sm-4 mb-4">
+                <div class="wl-card p-3 text-center">
+                    <div class="wl-font-header wl-font-md">{{game.teams[1]}}</div>
+                    <hr class="mb-2">
+                    <div *ngFor="let player of game.players">
+                        <div *ngIf="player.teamId === game.teams[1]" class="wl-font-body wl-font-sm">
+                            {{player.id}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+    </ng-container>
+</div>

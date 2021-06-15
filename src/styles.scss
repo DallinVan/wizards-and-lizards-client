@@ -1,1 +1,127 @@
-/* You can add global styles to this file, and also import other style files */
+@import './colors.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+.wl-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.wl-card {
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0px 4px 6px 0px gray;
+}
+
+.wl-marble {
+    height: 64px;
+    width: 64px;
+    border-radius: 32px;
+}
+
+// Typography
+.wl-font-header {
+    font-family: 'Cinzel Decorative', cursive;
+}
+.wl-font-body {
+    font-family: 'Mallanna', sans-serif;
+}
+
+@mixin wl-font-xs {
+    font-size: 14px;
+}
+@mixin wl-font-sm {
+    font-size: 16px;
+}
+@mixin wl-font-md {
+    font-size: 24px;
+}
+@mixin wl-font-lg {
+    font-size: 32px;
+}
+@mixin wl-font-xl {
+    font-size: 64px;
+}
+@mixin wl-font-xxl {
+    font-size: 96px;
+}
+.wl-font-xs {
+    font-size: 14px;
+}
+.wl-font-sm {
+    font-size: 16px;
+}
+.wl-font-md {
+    font-size: 24px;
+}
+.wl-font-lg {
+    font-size: 32px;
+}
+.wl-font-xl {
+    font-size: 64px;
+}
+.wl-font-xxl {
+    font-size: 96px;
+}
+
+// Buttons
+.wl-button {
+    border: 5px solid $dark;
+    background: transparent;
+    color: $dark;
+    height: 48px;
+    width: 100%;
+    border-radius: 24px;
+    @extend .wl-font-body;
+    @extend .wl-font-md;
+}
+.wl-button:active {
+    border-color: black;
+    color: black;
+}
+.wl-button:focus {
+    outline: none;
+}
+
+.wl-button-light {
+    @extend .wl-button;
+    border: 5px solid white;
+    color: white;
+}
+.wl-button-light:active {
+    border-color: lightgray;
+    color: lightgray;
+}
+
+// Input
+input[type="text"] {
+    width: 100%;
+    height: 48px;
+    @extend .wl-font-body;
+    @extend .wl-font-md;
+    border: 2px solid $dark;
+    border-radius: 4px;
+    padding: 8px;
+}
+select {
+    width: 100%;
+    height: 48px;
+    @extend .wl-font-body;
+    @extend .wl-font-sm;
+    border: 2px solid $dark;
+    border-radius: 4px;
+    padding: 8px;
+}
+select:focus {
+    outline: none;
+}
+
+// Miscellaneous
+.clickable {
+    cursor: pointer;
+}
+.clickable:focus {
+    outline: none;
+}

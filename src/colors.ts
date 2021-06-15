@@ -1,0 +1,17 @@
+export const dark = '#343a40';
+export const red = '#e60000';
+export const redAccent = '#b30000';
+export const orange = '#ff6600';
+export const orangeAccent = '#cc5200';
+export const yellow = '#ffcc00';
+export const yellowAccent = '#b38f00';
+export const green = '#33cc33';
+export const greenAccent = '#248f24';
+export const blue = '#0066ff';
+export const blueAccent = '#0047b3';
+export const purple = '#cc00cc';
+export const purpleAccent = '#990099';
+export const black = 'black';
+export const blackAccent = '#595959';
+export const white = 'white';
+export const whiteAccent = '#cccccc';

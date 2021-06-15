@@ -1,0 +1,4 @@
+<div class="mr-3" [ngClass]="selected ? 'wl-selected' : ''">
+    <img *ngIf="cardUrl && !isJoker" class='wl-playing-card' [src]='cardUrl'>
+    <div *ngIf="isJoker" class="wl-card wl-joker wl-font-header">Joker</div>
+</div>

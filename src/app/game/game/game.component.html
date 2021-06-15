@@ -1,0 +1,40 @@
+<div class="container-fluid wl-game">
+    <ng-container *ngIf="game">
+        <div class="row">
+
+            <div class="col-6 col-sm-2 wl-no-padding">
+                <!-- Players -->
+                <div *ngFor="let player of playersInOrder">
+                    <!-- {{player.id}} -->
+                    <app-player-identifier
+                        [playerId]="player.id"
+                        [teamId]="player.teamId"
+                        [playersTurn]="game.whosTurn === player.id"
+                        [color]="player.color" 
+                    >
+                    </app-player-identifier>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-10">
+                <!-- Game board -->
+                {{game.whosTurn}}'s Turn
+            </div>
+
+        </div>
+        <div class="row wl-hand">
+            <!-- Hand -->
+            <div *ngFor="let card of hand">
+                <app-playing-card
+                    (click)="selectCard(card)"
+                    [cardSuit]="card.suit"
+                    [cardValue]="card.value"
+                    [selected]="card.selected"
+                ></app-playing-card>
+            </div>
+            <div>
+                <button class="wl-button" (click)="playCard()">Play card</button>
+            </div>
+        </div>
+    </ng-container>
+</div>

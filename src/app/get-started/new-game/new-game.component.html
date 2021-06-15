@@ -1,0 +1,43 @@
+<div class="wl-new-game-container container-fluid">
+    <div class="row">
+        <div class="col-3"></div>
+        <div [formGroup]="newGameFormGroup" class="col-12 col-sm-6 pt-4 pb-4">
+
+            <div class="wl-font-header wl-font-md font-weight-bold mb-3 text-center">Teams</div>
+            <input type="text" formControlName="team1" class="mb-3" placeholder="Wizards"/>
+            <div class="wl-font-body wl-font-sm text-center mb-2">VS</div>
+            <input type="text" formControlName="team2" placeholder="Lizards"/>
+
+            <div class="wl-font-header wl-font-md font-weight-bold mb-3 mt-5 text-center">Players</div>
+            <select formControlName="numberOfPlayers">
+                <option value="4">4</option>
+                <!-- <option>6</option>
+                <option>8</option>
+                <option>10</option>
+                <option>12</option> -->
+            </select>
+
+            <div class="wl-font-header wl-font-md font-weight-bold mb-3 mt-5 text-center">Rules</div>
+            <input type="radio" name="ruleSet" formControlName="ruleSet" value="default" checked="default"/>
+                <span class="wl-font-body wl-font-md ml-2">Wizards and Lizards</span>
+            <br>
+            <input type="radio" name="ruleSet" formControlName="ruleSet" value="classic"/>
+                <span class="wl-font-body wl-font-md ml-2">Classic</span>
+            <br>
+
+            <div class="wl-font-header wl-font-md font-weight-bold mb-3 mt-5 text-center">Settings</div>
+            <div class="wl-font-body wl-font-sm">Number of jokers per player</div>
+            <select formControlName="numberOfJokers">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <hr class="mt-5">
+            <button class="wl-button mt-4" (click)="createNewGame()">Create game</button>
+        <div class="col-3"></div>
+    </div>
+</div>

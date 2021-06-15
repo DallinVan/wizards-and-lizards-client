@@ -1,37 +1,47 @@
-<h1>Wizards and Lizards</h1>
-<!-- <input #name type="text" id="name"/>
+<header class="bg-dark text-white wl-header">
+  <div class="wl-row p-2">
+    <!-- <span class="wl-font-header wl-font-md">Wizards and Lizards</span> -->
+    <span [routerLink]="['/']" class="wl-font-header wl-font-md clickable">W+L</span>
+  </div>
+</header>
+<!-- <br>
 <br>
-<input #input type="text" id="input"/>
+<span class="wl-font-header wl-font-xl">W+L</span>
 <br>
-<button (click)="joinGame(input.value, name.value)">Join game</button>
+<span class="wl-font-header wl-font-xl">Wizards and Lizards</span>
+<br>
+<span class="wl-font-body wl-font-md">Welcome to the game! To get started, create a new game or join an existing one!</span> -->
+<div class="wl-content">
+  <router-outlet></router-outlet>
+</div>
+
+<!-- <h1>Wizards and Lizards</h1>
+<h3>Team 1</h3>
+<select #team1>
+  <option value="wizards">Wizards</option>
+  <option value="lizards">Lizards</option>
+</select>
+<h3>Team 2</h3>
+<select #team2>
+  <option value="wizards">Wizards</option>
+  <option value="lizards">Lizards</option>
+</select>
+<br><br>
+<button (click)="addTeams(game.value, team1.value, team2.value)">Add teams</button>
+
+<h3>Name</h3>
+<input #name type="text"/>
+<br> -->
+<!-- <input #input type="text" id="input"/> -->
+<!-- <h3>Existing games</h3>
+<select #game>
+  <option *ngFor="let game of joinableGames" [value]="game.id">{{game.id}}</option>
+</select>
+<br>
+<button [disabled]="!name.value" (click)="joinGame(game.value, name.value)">Join game</button>
 <button [disabled]="!yourTurn" (click)="takeTurn()">{{yourTurn ? 'Take turn' : 'Not your turn'}}</button> -->
-<!-- <br><br> -->
-<div class="hand hhand-compact active-hand">
+
+<!-- <div class="hand hhand-compact active-hand">
   <img class='card' src='../assets/cards/2C.svg'>
   <img class='card' src='../assets/cards/KS.svg'>
-  <img class='card' src='../assets/cards/QS.svg'>
-  <img class='card' src='../assets/cards/JS.svg'>
-  <img class='card' src='../assets/cards/10S.svg'>
-  <img class='card' src='../assets/cards/9H.svg'>
-  <img class='card' src='../assets/cards/3H.svg'>
-</div>
-<div>
-  <img class='card' src='../assets/cards/2C.svg'>
-  <img class='card' src='../assets/cards/KS.svg'>
-  <img class='card' src='../assets/cards/QS.svg'>
-  <img class='card' src='../assets/cards/JS.svg'>
-  <img class='card' src='../assets/cards/10S.svg'>
-  <img class='card' src='../assets/cards/9H.svg'>
-  <img class='card' src='../assets/cards/3H.svg'>
-</div>
-<div>
-  <img class='card' src='../assets/cards/TC.svg'>
-  <img class='card' src='../assets/cards/TD.svg'>
-  <img class='card' src='../assets/cards/TS.svg'>
-  <img class='card' src='../assets/cards/TH.svg'>
-</div>
-<div>
-  <img class='card' src='../assets/cards/Red_Back.svg'>
-  <img class='card' src='../assets/cards/Blue_Back.svg'>
-</div>
-<router-outlet></router-outlet>
+</div> -->

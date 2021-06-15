@@ -1,0 +1,10 @@
+<div class="wl-player-identifier-container p-2"
+    [ngClass]="playersTurn ? 'wl-highlighted' : ''"
+    [ngStyle]="{'background': color}">
+    <div class="wl-font-body wl-font-md">
+        {{playerId}}
+    </div>
+    <div class="wl-font-header wl-font-sm">
+        {{teamId}}
+    </div>
+</div>
